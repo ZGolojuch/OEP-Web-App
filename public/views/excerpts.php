@@ -5,34 +5,9 @@
     <script src="https://kit.fontawesome.com/5c7f0abbc2.js" crossorigin="anonymous"></script>
     <title>EXCERPTS</title>
 </head>
-
 <body>
 <div class="base-container">
-    <nav>
-        <img src="public/img/logo.svg" height="200" width="200">
-        <ul>
-            <li>
-                <a href="#" class="button">excerpts</a>
-                <i class="fa-solid fa-book"></i>
-            </li>
-            <li>
-                <a href="#" class="button">users</a>
-                <i class="fa-solid fa-user-group"></i>
-            </li>
-            <li>
-                <a href="#" class="button">messages</a>
-                <i class="fa-solid fa-message"></i>
-            </li>
-            <li>
-                <a href="#" class="button">notifications</a>
-                <i class="fa-solid fa-bell"></i>
-            </li>
-            <li>
-                <a href="#" class="button">settings</a>
-                <i class="fa-solid fa-sliders"></i>
-            </li>
-        </ul>
-    </nav>
+
     <main>
         <header>
             <div class="search-bar">
@@ -40,9 +15,9 @@
                     <input placeholder="search excerpt">
                 </form>
             </div>
-            <div class="add-excerpt">
-                <i class="fa-solid fa-dice" style="color: #ffffff;"></i>
-                Add new excerpt
+            <div>
+                <i class="fa-solid fa-dice" style="color: #7c03b3;"></i> <!-- dodac ikonke plusa-->
+                <a href="#" class="button2">Add new excerpt</a>
             </div>
         </header>
         <section class="excerpts">
@@ -68,5 +43,32 @@
             </div>
         </section>
     </main>
+    <nav>
+        <div id="name">OEP</div>
+
+        <img src="public/img/logo.svg" height="200" width="200">
+        <ul>
+            <li>
+                <a href="#" class="button">excerpts</a>
+                <i class="fa-solid fa-book"></i>
+            </li>
+            <li>
+                <a href="#" class="button">users</a>
+                <i class="fa-solid fa-user-group"></i>
+            </li>
+            <li>
+                <a href="#" class="button">messages</a>
+                <i class="fa-solid fa-message"></i>
+            </li>
+            <li>
+                <a href="#" class="button">notifications</a>
+                <i class="fa-solid fa-bell"></i>
+            </li>
+            <li>
+                <a href="#" class="button">settings</a>
+                <i class="fa-solid fa-sliders"></i>
+            </li>
+        </ul>
+    </nav>
 </div>
 </body>

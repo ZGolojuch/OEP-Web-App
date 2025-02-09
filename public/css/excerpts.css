@@ -1,0 +1,32 @@
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+    padding: 2em;
+    overflow: auto;
+}
+
+.excerpts>div>img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1em 1em 0 0;
+}
+
+.excerpts>div>div {
+    height: 10%;
+    margin: 1em;
+    color: #9f17de;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.excerpts>div {
+    border: 1px solid gray;
+    border-radius: 1em 1em 0 0;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+}

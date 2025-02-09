@@ -16,8 +16,9 @@
                 </form>
             </div>
             <div>
-                <i class="fa-solid fa-dice" style="color: #7c03b3;"></i> <!-- dodac ikonke plusa-->
+                <i class="fa-solid fa-dice" style="color: #7c03b3;"></i> <!-- zmienic na ikonke plusa-->
                 <a href="#" class="button2">Add new excerpt</a>
+                <!--<button class="button2" type="submit">Add new excerpt</button>-->
             </div>
         </header>
         <section class="excerpts">
@@ -32,9 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div id="excerpt-2">
-                excerpt 2
-            </div>
+
             <div>
                 excerpt 3
             </div>

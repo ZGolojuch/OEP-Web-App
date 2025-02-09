@@ -30,3 +30,9 @@ section {
     flex-direction: column;
     /*justify-content: space-between;*/
 }
+
+
+.excerpts-form > form {
+    display: flex;
+    flex-direction: column;
+}

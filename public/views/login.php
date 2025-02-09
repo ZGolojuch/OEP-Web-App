@@ -6,7 +6,7 @@
 
 <body>
 <div class="container">
-    <h1 class="title">Orchestra Excerpts Practice</h1>
+    <h1 class="title">Orchestra Excerpts Practise</h1>
     <div class="logo">
         <img src="public/img/logo.svg" width="250" height="250">
     </div>

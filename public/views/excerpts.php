@@ -33,7 +33,9 @@
                     </div>
                 </div>
             </div>
-
+            <div>
+                excerpt 2
+            </div>
             <div>
                 excerpt 3
             </div>

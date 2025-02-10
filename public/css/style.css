@@ -101,7 +101,7 @@ input, textarea {
     width: 50%;
 }
 
-@media only screen and (max-device-width: 440px) {
+@media only screen and (max-device-width: 480px) {
     .container {
         flex-direction: column;
     }

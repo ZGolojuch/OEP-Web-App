@@ -8,8 +8,14 @@ class DefaultController extends AppController {
         $this->render('login');
     }
 
-    public function excerpts() {
-        $this->render('excerpts');
+    public function login() {
+        $this->render('login');
+    }
+
+
+
+    public function register() {
+        $this->render('register');
     }
 }
 

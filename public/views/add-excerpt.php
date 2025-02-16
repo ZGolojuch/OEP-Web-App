@@ -16,7 +16,7 @@
                 </form>
             </div>
             <div>
-                <i class="fa-solid fa-dice" style="color: #7c03b3;"></i> <!-- dodac ikonke plusa-->
+                <i class="fa-solid fa-circle-plus" style="color: #7c03b3;"></i>
                 <a href="#" class="button2">Add new excerpt</a>
             </div>
         </header>
@@ -46,7 +46,7 @@
         <img src="public/img/logo.svg" height="200" width="200">
         <ul>
             <li>
-                <a href="#" class="button">excerpts</a>
+                <a href="excerpts" class="button">excerpts</a>
                 <i class="fa-solid fa-book"></i>
             </li>
             <li>

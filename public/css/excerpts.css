@@ -1,5 +1,8 @@
 section {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
     padding: 2em;
@@ -30,7 +33,6 @@ section {
     flex-direction: column;
     /*justify-content: space-between;*/
 }
-
 
 .excerpts-form > form {
     display: flex;

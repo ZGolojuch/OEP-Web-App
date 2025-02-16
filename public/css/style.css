@@ -102,6 +102,7 @@ input, textarea {
 }
 
 @media only screen and (max-device-width: 480px) {
+
     .container {
         flex-direction: column;
     }
@@ -133,9 +134,12 @@ input, textarea {
 }
 
 .base-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: flex-start;*/
     height: 100vh;
 }
 
@@ -148,12 +152,9 @@ nav {
     justify-content: flex-start;
 }
 
-main {
-    width: 80vw;
-}
 
 nav > img {
-    margin: 2em auto;
+    margin: 1.5em auto;
 }
 
 a {
@@ -205,6 +206,7 @@ main {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    width: 80vw;
 }
 
 header {
@@ -244,3 +246,13 @@ header {
     margin: 0;
     box-sizing: border-box;
 }
+
+
+.no-valid{
+    border: 2px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
+
+

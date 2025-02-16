@@ -2,6 +2,7 @@
 
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/Excerpt.php';
+require_once __DIR__ .'/../repository/ExcerptRepository.php';
 
 class ExcerptController extends AppController
 {
@@ -9,7 +10,19 @@ class ExcerptController extends AppController
     const SUPPORTED_TYPES = ['image/png', 'image/jpeg'];
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
-    private $message = [];
+    private $messages = [];
+
+    private $excerptRepository;
+
+    public function __construct(){
+        parent::__construct();
+        $this->excerptRepository = new ExcerptRepository();
+    }
+
+    public function excerpts() {
+        $excerpts = $this->excerptRepository->getExcerpts();
+        $this->render('excerpts', ['excerpts' => $excerpts]);
+    }
 
     public function addExcerpt()
     {
@@ -20,24 +33,35 @@ class ExcerptController extends AppController
             );
 
             // TODO create new excerpt object and save it in database
-            $excerpt = new Excerpt($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            $excerpt = new Excerpt($_POST['title'], $_POST['information'], $_FILES['file']['name']);
+            $this->excerptRepository->addExcerpt($excerpt);
 
-            return $this->render('excerpts', ['messages' => $this->message]);
+            return $this->render('excerpts', [
+                'excerpts' => $this->excerptRepository->getExcerpts(),
+                'messages' => $this->messages
+            ]);
         }
-        return $this->render('add-excerpt', ['messages' => $this->message]);
+        return $this->render('add-excerpt', ['messages' => $this->messages]);
+    }
+
+    public function search()
+    {
+        //TODO
+        #return $this->render('search');
     }
 
     private function validate(array $file): bool
     {
         if ($file['size'] > self::MAX_FILE_SIZE) {
-            $this->message[] = 'File is too large for destination file system.';
+            $this->messages[] = 'File is too large for destination file system.';
             return false;
         }
 
         if (!isset($file['type']) || !in_array($file['type'], self::SUPPORTED_TYPES)) {
-            $this->message[] = 'File type is not supported.';
+            $this->messages[] = 'File type is not supported.';
             return false;
         }
         return true;
     }
+
 }

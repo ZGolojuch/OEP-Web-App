@@ -2,17 +2,17 @@
 
 class Excerpt {
     private $title;
-    private $description;
+    private $information;
     private $image;
 
-    public function __construct($title, $description, $image)
+    public function __construct($title, $information, $image)
     {
         $this->title = $title;
-        $this->description = $description;
+        $this->information = $information;
         $this->image = $image;
     }
 
-    public function getTitle() #: string
+    public function getTitle(): string
     {
         return $this->title;
     }
@@ -22,14 +22,14 @@ class Excerpt {
         $this->title = $title;
     }
 
-    public function getDescription() #: string
+    public function getInformation(): string
     {
-        return $this->description;
+        return $this->information;
     }
 
-    public function setDescription($description)
+    public function setInformation($information)
     {
-        $this->description = $description;
+        $this->information = $information;
     }
 
     public function getImage()

@@ -3,3 +3,6 @@ public/img
 .idea
 .vscode
 config.php
+public/css/excerpts.css
+public/css/style.css
+public/views/orkiestrowka.php

@@ -20,7 +20,7 @@ class UserRepository extends Repository
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user == false) {
-            return null;    #TODO nieodpowiedni zapis, powinien byc wyjatek exception i zabezpieczyc w try catch
+            return null;    # nieodpowiedni zapis, powinien byc wyjatek exception i zabezpieczyc w try catch
         }
 
         return new User($user['email'],
@@ -28,7 +28,28 @@ class UserRepository extends Repository
             $user['name'],
             $user['surname']
         );
-
     }
 
+//    public function getUsers(string $email)
+//    {
+//        $stmt = $this->database->connect()->prepare("
+//        SELECT users.id_user, user_details.name, user_details.surname, roles.name as role
+//          FROM users
+//          JOIN user_details ON users.id_user_details = user_details.id_user_details
+//          JOIN roles ON users.id_role = roles.id_role
+//        ");
+////        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+//        $stmt->execute();
+//        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//
+//        if ($users == false) {
+//            return null;    # nieodpowiedni zapis, powinien byc wyjatek exception i zabezpieczyc w try catch
+//        }
+//
+//        return new User($users['email'],
+//            $users['password'],
+//            $users['name'],
+//            $users['surname']
+//        );
+//    }
 }

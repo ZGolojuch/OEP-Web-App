@@ -7,13 +7,13 @@ class Excerpt {
     private $likes;
     private $dislikes;
 
-    public function __construct($title, $information, $image)
+    public function __construct($title, $information, $image, $likes, $dislikes)
     {
         $this->title = $title;
         $this->information = $information;
         $this->image = $image;
-        $this->likes = 0;
-        $this->dislikes = 0;
+        $this->likes = $likes;
+        $this->dislikes = $dislikes;
     }
 
     public function getTitle(): string

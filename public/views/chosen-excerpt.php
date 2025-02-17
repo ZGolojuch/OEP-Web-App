@@ -2,11 +2,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/styl.css">
     <script src="https://kit.fontawesome.com/5c7f0abbc2.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="public/js/search.js" defer></script>
-
     <script type="text/javascript" src="public/js/menu.js" defer></script>
-
-    <title>EXCERPTS</title>
+    <title>CHOSEN-EXCERPT</title>
 </head>
 
 <body>
@@ -51,28 +48,8 @@
     </div>
 
     <main>
-        <div class="cards">
-            <?php foreach ($excerpts as $excerpt): ?>
-            <div class="card">
-                <img src="public/uploads/<?= $excerpt->getImage(); ?>" height="300px" width="300px" alt="ni ma" >
-                <h2><?= $excerpt->getTitle(); ?> </h2>
-                <p><?= $excerpt->getInformation(); ?> </p>
-                <i class="fas fa-heart"><?= $excerpt->getLikes(); ?></i>
-                <i class="fa-solid fa-thumbs-down"><?= $excerpt->getDislikes(); ?></i>
-            </div>
-            <?php endforeach; ?>
-        </div>
+
+
     </main>
 </div>
 </body>
-
-
-<template id="excerpt-template">
-    <div>
-        <img src="" alt="ni ma">
-        <h2>title</h2>
-        <p>information</p>
-        <i class="fas fa-heart"> 0</i>
-        <i class="fa-solid fa-thumbs-down"> 0</i>
-    </div>
-</template>

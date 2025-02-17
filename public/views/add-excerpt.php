@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/styl.css">
-<!--    <link rel="stylesheet" type="text/css" href="public/css/excerpts.css">-->
     <script src="https://kit.fontawesome.com/5c7f0abbc2.js" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="public/js/menu.js" defer></script>
@@ -10,7 +9,6 @@
 
 <body>
 <div class="base-container">
-
     <div class="hamburger">
         <nav>
             <div id="name">OEP</div>
@@ -28,15 +26,15 @@
                     <i class="fa-solid fa-book"></i>
                 </li>
                 <li>
-                    <a href="#" class="button2">Favourites</a>
+                    <a href="favourites" class="button2">Favourites</a>
                     <i class="fa-solid fa-heart"></i>
                 </li>
                 <li>
-                    <a href="#" class="button2">Users</a>
+                    <a href="users" class="button2">Users</a>
                     <i class="fa-solid fa-user-group"></i>
                 </li>
                 <li>
-                    <a href="#" class="button2">Settings</a>
+                    <a href="settings" class="button2">Settings</a>
                     <i class="fa-solid fa-sliders"></i>
                 </li>
                 <li>
@@ -44,7 +42,6 @@
                     <i class="fa-solid fa-right-from-bracket"></i>
                 </li>
             </ul>
-
             <ul class="mobile-icons">
                 <i class="fa-solid fa-bars"></i>
             </ul>

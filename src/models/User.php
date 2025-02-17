@@ -6,7 +6,7 @@ class User
 {
     private $email;
     private $password;
-    private $name;          //TODO zlaczenie na user_details zeby dzialalo
+    private $name;
     private $surname;
 
     public function __construct(string $email,string $password,string $name,string $surname)
@@ -24,6 +24,14 @@ class User
     public function getPassword()
     {
         return $this->password;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function getSurname()
+    {
+        return $this->surname;
     }
 
 }

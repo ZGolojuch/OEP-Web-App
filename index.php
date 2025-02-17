@@ -13,8 +13,9 @@ Router::post('addExcerpt', 'ExcerptController');
 Router::post('register', 'DefaultController');
 #Router::post('logout', 'SecurityController');
 Router::post('search', 'ExcerptController');
-
-
-Router::get('orkiestrowka', 'DefaultController');
+Router::post('favourites', 'DefaultController');
+Router::post('users', 'DefaultController');
+Router::post('settings', 'DefaultController');
+Router::post('chosen-excerpt', 'DefaultController');
 
 Router::run($path);

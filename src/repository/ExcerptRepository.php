@@ -12,7 +12,7 @@ class ExcerptRepository extends Repository
         SELECT * FROM public.excerpts
         JOIN compositors ON id_compositor = compositors.id_compositor   
         WHERE id = :id
-        ");                    //TODO widok instrumentow, kompozytorow
+        ");
 
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
@@ -20,28 +20,29 @@ class ExcerptRepository extends Repository
         $excerpt = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($excerpt == false) {
-            return null;    #TODO nieodpowiedni zapis, powinien byc wyjatek exception i zabezpieczyc w try catch
+            return null;    # nieodpowiedni zapis, powinien byc wyjatek exception i zabezpieczyc w try catch
         }
 
         return new Excerpt(
             $excerpt['title'],
             $excerpt['information'],
-            $excerpt['image']
-            #$excerpt['']
+            $excerpt['image'],
+            $excerpt['likes'],
+            $excerpt['dislikes']
         );
 
     }
 
     public function addExcerpt(Excerpt $excerpt): void
     {
-        $date = new DateTime(); #chyba niepotrzebne
+        $date = new DateTime(); # niepotrzebne
 
         $stmt = $this->database->connect()->prepare("
         INSERT INTO public.excerpts (title, information, id_created_by, image)
         VALUES (?, ?, ?, ?) --:title, :information, :id_created_by, :image
         ");
 
-        $id_created_by = 1;     //TODO zrobić pobieranie id z sesji użytkownika
+        $id_created_by = 1;     // zrobić pobieranie id z sesji użytkownika
 
         $stmt->execute([
             $excerpt->getTitle(),
@@ -71,7 +72,9 @@ class ExcerptRepository extends Repository
             $result[] = new Excerpt(
                 $excerpt['title'],
                 $excerpt['information'],
-                $excerpt['image']);
+                $excerpt['image'],
+                $excerpt['likes'],
+                $excerpt['dislikes']);
         }
 
         return $result;

@@ -63,5 +63,5 @@ Orchestra Excerpt Practice to aplikacja internetowa umożliwiająca użytkowniko
 - **Ziemowit Gołojuch**
 
 ## Screenshoty
-Screenshoty są dołączone w repozytorium w folderze `screenshots/`, a opisy znajdują się tutaj:
+Screenshoty są dołączone w repozytorium w folderze `screenshots/`.
 

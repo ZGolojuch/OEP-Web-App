@@ -60,7 +60,7 @@
                 <h2><?= $excerpt->getTitle(); ?> </h2>
                 <p><?= $excerpt->getInformation(); ?> </p>
                 <i class="fas fa-heart"><?= $excerpt->getLikes(); ?></i>
-                <i class="fa-solid fa-thumbs-down"> 3</i>
+                <i class="fa-solid fa-thumbs-down"><?= $excerpt->getDislikes(); ?></i>
             </div>
             <?php endforeach; ?>
         </div>

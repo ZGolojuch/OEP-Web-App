@@ -65,7 +65,7 @@
                     ?>
                 </div>
                 <input name="title" type="text" placeholder="title">
-                <textarea name="description" rows="5" placeholder="information"></textarea>
+                <textarea name="information" rows="5" placeholder="information"></textarea>
 
                 <input type="file" name="file">
                 <button type="submit">send</button>

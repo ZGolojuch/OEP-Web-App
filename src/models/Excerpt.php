@@ -5,6 +5,7 @@ class Excerpt {
     private $information;
     private $image;
     private $likes;
+    private $dislikes;
 
     public function __construct($title, $information, $image)
     {
@@ -12,6 +13,7 @@ class Excerpt {
         $this->information = $information;
         $this->image = $image;
         $this->likes = 0;
+        $this->dislikes = 0;
     }
 
     public function getTitle(): string
@@ -50,5 +52,13 @@ class Excerpt {
     public function setLikes($likes)
     {
         $this->likes = $likes;
+    }
+    public function getDislikes()
+    {
+        return $this->dislikes;
+    }
+    public function setDislikes($dislikes)
+    {
+        $this->dislikes = $dislikes;
     }
 }

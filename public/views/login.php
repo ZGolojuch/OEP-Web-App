@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/styl.css">
+    <link rel="stylesheet" type="text/css" href="public/css/login.css">
     <title>LOGIN PAGE</title>
 </head>
 
@@ -24,6 +25,7 @@
             <input name="email" type="text" placeholder="email@email.com">
             <input name="password" type="password" placeholder="password">
             <button type="submit">LOGIN</button>
+            <a href="register">Register</a>
         </form>
     </div>
 </div>

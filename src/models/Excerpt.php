@@ -4,12 +4,14 @@ class Excerpt {
     private $title;
     private $information;
     private $image;
+    private $likes;
 
     public function __construct($title, $information, $image)
     {
         $this->title = $title;
         $this->information = $information;
         $this->image = $image;
+        $this->likes = 0;
     }
 
     public function getTitle(): string
@@ -40,5 +42,13 @@ class Excerpt {
     public function setImage($image)
     {
         $this->image = $image;
+    }
+    public function getLikes()
+    {
+        return $this->likes;
+    }
+    public function setLikes($likes)
+    {
+        $this->likes = $likes;
     }
 }

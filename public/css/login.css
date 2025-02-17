@@ -1,0 +1,29 @@
+@media (max-width: 650px) {
+
+    .logo {
+        display: none;
+    }
+
+    .login-container {
+        margin-right: auto;
+        margin-left: 5em;
+        margin-top: 10em;
+        text-align: center;
+        object-position: center;
+        width: 100%;
+        position: relative;
+        padding: 50px;
+    }
+
+
+    .register-container {
+        margin-right: auto;
+        margin-left: 5em;
+        margin-top: 5em;
+        text-align: center;
+        object-position: center;
+        width: 100%;
+        position: relative;
+        padding: 50px;
+    }
+}

@@ -1,0 +1,386 @@
+body {
+    margin: 0;
+}
+
+.base-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /*height: 100vh;*/
+    }
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: calc(100% - 13em);
+    /*    padding: 1em;*/
+}
+
+nav {
+    /*width: 20vw;*/
+    height: 100%;
+    background: transparent linear-gradient(180deg, #8f3df3 0%, #480d71 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+
+    overflow-y: auto;
+    padding: 8px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+nav > img {
+    margin: 2em auto;
+}
+
+ul {
+    list-style-type: none;
+    font: normal normal normal 20px/27px Segoe UI;
+    letter-spacing: 0.72px;
+    color: #FFFFFF;
+    height: 100%;
+    width: calc(100% - 40px);
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+
+li {
+    text-align: left;
+    color: white;
+    margin-bottom: 1em;
+}
+
+ul li {
+    display: flex;
+    align-items: center; /* Dostosuj ikonę i przycisk w pionie */
+    gap: 10px; /* Odstęp pomiędzy przyciskiem a ikoną */
+}
+ul li i {
+    margin: 0; /* Usuwa margines, jeśli ikony mają domyślne odstępy */
+}
+ul li a {
+    flex-grow: 1; /* Opcjonalnie — zapewnia, że link zajmuje odpowiednią szerokość */
+    display: flex;
+    align-items: center;
+}
+
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 2em;
+}
+
+li i {
+    font-size: 1.5em;
+}
+
+/*li:last-child {*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*}*/
+
+.search-bar>input {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 23px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: #A8A8A8;
+    margin: 0;
+    box-sizing: border-box;
+    height: 2em;
+}
+
+#name {
+    color: white;
+    margin-top: 3px;
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button2{
+    background: transparent linear-gradient(180deg, #8f3df3 0%, #480d71 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+    font-size: 12px;
+    padding: 1em;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: center;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.card {
+    width: 300px;
+    box-shadow: 0 0 1em gray;
+    border-radius: 1em;
+    position: relative;
+    background-color: aliceblue;
+    /*margin: 1em;*/
+    /*overflow: hidden;*/
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    padding: 1em;
+}
+.card > img {
+    width: 100%;
+    /*height: 200px;*/
+    /*object-fit: cover;*/
+    border-radius: 1em 1em 0 0;
+}
+.card > h2 {
+    padding: 0em 1em;
+    /*text-align: center;*/
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #9f17de;
+}
+.card > p {
+    padding: 1em;
+    /*text-align: center;*/
+    font-size: 1em;
+    font-weight: bold;
+    color: #9f17de;
+}
+.card > i {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+
+nav > ul.mobile-icons {
+    display: none;
+}
+
+
+input, textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 1em;
+    margin: 1em;
+    width: 50%;
+}
+
+.add-excerpts {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    object-position: center;
+}
+
+
+.no-valid{
+    border: 2px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
+
+
+@media (max-width: 650px) {
+
+    .base-container {
+        flex-direction: column;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav > ul.mobile-icons {
+        display: block;
+    }
+
+    ul {
+        display: none;
+        margin-top: 0;
+    }
+
+    .search-bar>input {
+        height: 3em;
+    }
+
+    .hamburger {
+        display: flex;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 3000;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        background-color: #8f3df3;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+    }
+
+    nav.active ul {
+        display: flex; /* Pokaż menu tylko gdy nawigacja jest aktywna */
+        flex-direction: column; /* Aby elementy były w pionie */
+        justify-content: center;
+        align-items: center;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: #480d71;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 2000;
+    }
+
+    nav.active {
+        transform: translateY(0);
+    }
+
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #8f3df3 0%, #480d71 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+    width: 40%;
+    text-align: center;
+}
+
+.login-container {
+    width: 40%;
+}
+
+.register-container {
+    width: 40%;
+    height: 40vh;
+}
+
+form.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 40vh;
+
+    background: #FFFFFFE0 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 33px;
+}
+
+form.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60vh;
+
+    background: #FFFFFFE0 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 33px;
+}
+
+.login-container > form > button {
+    background: transparent linear-gradient(180deg, #8f3df3 0%, #480d71 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+    font-size: 12px;
+    padding: 1em;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: center;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.register-container > form > button {
+    background: transparent linear-gradient(180deg, #8f3df3 0%, #480d71 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+    font-size: 12px;
+    padding: 1em;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: center;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 1em;
+}
+
+label {
+    font-size: 1em;
+    width: 50%;
+}

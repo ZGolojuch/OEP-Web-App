@@ -10,6 +10,6 @@ class Repository
 
     public function __construct()
     {
-        $this->database = new Database();   #TU mozna zrobic SINGLETON
+        $this->database = new Database();   //TODO TU mozna zrobic SINGLETON
     }
 }

@@ -17,5 +17,16 @@ class DefaultController extends AppController {
     public function register() {
         $this->render('register');
     }
+
+
+
+
+
+
+
+
+    public function orkiestrowka() {
+        $this->render('orkiestrowka');
+    }
 }
 

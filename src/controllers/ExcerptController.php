@@ -32,9 +32,8 @@ class ExcerptController extends AppController
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
 
-            // TODO create new excerpt object and save it in database
             $excerpt = new Excerpt($_POST['title'], $_POST['information'], $_FILES['file']['name']);
-            $this->excerptRepository->addExcerpt($excerpt);
+            $this->excerptRepository->addExcerpt($excerpt); // created new excerpt object and saved it in database
 
             return $this->render('excerpts', [
                 'excerpts' => $this->excerptRepository->getExcerpts(),
@@ -46,8 +45,16 @@ class ExcerptController extends AppController
 
     public function search()
     {
-        //TODO
-        #return $this->render('search');
+        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+
+        if($contentType === 'application/json') {
+            $content = trim(file_get_contents('php://input'));
+            $decoded = json_decode($content, true);
+
+            header('Content-Type: application/json');
+            http_response_code(200);
+            echo json_encode($this->excerptRepository->getExcerptByTitle($decoded['search']));
+        }
     }
 
     private function validate(array $file): bool

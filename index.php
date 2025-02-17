@@ -14,4 +14,7 @@ Router::post('register', 'DefaultController');
 #Router::post('logout', 'SecurityController');
 Router::post('search', 'ExcerptController');
 
+
+Router::get('orkiestrowka', 'DefaultController');
+
 Router::run($path);

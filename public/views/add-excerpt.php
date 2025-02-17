@@ -1,26 +1,58 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/excerpts.css">
+    <link rel="stylesheet" type="text/css" href="public/css/styl.css">
+<!--    <link rel="stylesheet" type="text/css" href="public/css/excerpts.css">-->
     <script src="https://kit.fontawesome.com/5c7f0abbc2.js" crossorigin="anonymous"></script>
-    <title>EXCERPTS</title>
+
+    <script type="text/javascript" src="public/js/menu.js" defer></script>
+    <title>ADD-EXCERPTS</title>
 </head>
 
 <body>
 <div class="base-container">
-    <main>
-        <header>
-            <div class="search-bar">
-                <form>
+
+    <div class="hamburger">
+        <nav>
+            <div id="name">OEP</div>
+            <img src="public/img/logo.svg" height="200" width="200">
+            <ul>
+                <li class="search-bar">
                     <input placeholder="search excerpt">
-                </form>
-            </div>
-            <div>
-                <i class="fa-solid fa-circle-plus" style="color: #7c03b3;"></i>
-                <a href="#" class="button2">Add new excerpt</a>
-            </div>
-        </header>
-        <section class="excerpts-form">
+                </li>
+                <li>
+                    <a href="addExcerpt" class="button2">Add new excerpt</a>
+                    <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i>
+                </li>
+                <li>
+                    <a href="excerpts" class="button2">All excerpts</a>
+                    <i class="fa-solid fa-book"></i>
+                </li>
+                <li>
+                    <a href="#" class="button2">Favourites</a>
+                    <i class="fa-solid fa-heart"></i>
+                </li>
+                <li>
+                    <a href="#" class="button2">Users</a>
+                    <i class="fa-solid fa-user-group"></i>
+                </li>
+                <li>
+                    <a href="#" class="button2">Settings</a>
+                    <i class="fa-solid fa-sliders"></i>
+                </li>
+                <li>
+                    <a href="http://localhost:8080" class="button2">Log out</a>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </li>
+            </ul>
+
+            <ul class="mobile-icons">
+                <i class="fa-solid fa-bars"></i>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="add-excerpts">
             <h1>UPLOAD</h1>
             <form action="addExcerpt" method="POST" enctype="multipart/form-data">
                 <div class="messages">
@@ -33,39 +65,16 @@
                     ?>
                 </div>
                 <input name="title" type="text" placeholder="title">
-                <textarea name="description" rows="5" placeholder="description"></textarea>
+                <textarea name="description" rows="5" placeholder="information"></textarea>
 
                 <input type="file" name="file">
                 <button type="submit">send</button>
             </form>
+        </div>
+        <section class="excerpts-form">
+
         </section>
     </main>
-    <nav>
-        <div id="name">OEP</div>
 
-        <img src="public/img/logo.svg" height="200" width="200">
-        <ul>
-            <li>
-                <a href="excerpts" class="button">excerpts</a>
-                <i class="fa-solid fa-book"></i>
-            </li>
-            <li>
-                <a href="#" class="button">users</a>
-                <i class="fa-solid fa-user-group"></i>
-            </li>
-            <li>
-                <a href="#" class="button">messages</a>
-                <i class="fa-solid fa-message"></i>
-            </li>
-            <li>
-                <a href="#" class="button">notifications</a>
-                <i class="fa-solid fa-bell"></i>
-            </li>
-            <li>
-                <a href="#" class="button">settings</a>
-                <i class="fa-solid fa-sliders"></i>
-            </li>
-        </ul>
-    </nav>
 </div>
 </body>

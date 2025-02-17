@@ -6,7 +6,7 @@ class User
 {
     private $email;
     private $password;
-    private $name;
+    private $name;          //TODO zlaczenie na user_details zeby dzialalo
     private $surname;
 
     public function __construct(string $email,string $password,string $name,string $surname)
